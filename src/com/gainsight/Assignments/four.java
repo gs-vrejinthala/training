@@ -25,8 +25,10 @@ public class four
 					p++;
 					n=n/i;
 				}while(n%i==0);
-				
-				System.out.println(i+"^"+p);
+				if(n==1)
+				  System.out.print(i+"^"+p);
+				else
+					System.out.print(i+"^"+p+"*");
 				p=0;
 			}
 		}
