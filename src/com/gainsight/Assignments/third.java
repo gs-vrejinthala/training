@@ -9,7 +9,7 @@ public class third
 	public static void main(String[] args) throws IOException
 	{
 		//char[] frst,scnd;
-		int m,n,i,k,j,cnt=0;
+		int m,n,i,k,j,cnt=0,x=0;
 		BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
 		System.out.println("enter no of elements in frst & scnd array");
 		m=Integer.parseInt(br.readLine());
@@ -23,17 +23,17 @@ public class third
 			scnd[i]=(char)br.read();
 		for(i=0;i<m;i++)
 		{
-			for( j=i+1;j<m;j++)
+			for( j=i+1,cnt=0;j<m;j++)
 				if(frst[i]==frst[j])
 					cnt++;
 			if(cnt==0)
-				rslt[i]=frst[i];
+				rslt[x++]=frst[i];
 			
 		}
-		int x=i-1;	
+		x--;
 		for(i=0;i<n;i++)
 		{
-			for(j=i+1;j<x;j++)
+			for(j=i+1,cnt=0;j<x;j++)
 			    if(rslt[j]==scnd[i])
 					cnt++;
 				if(cnt==0)
